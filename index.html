@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Algonquin Storage</title>
+<meta property="og:title" content="Algonquin Storage | South River, Ontario">
+<meta property="og:description" content="Indoor and outdoor storage for boats, RVs, cars, ATVs and sleds, just west of Algonquin Park. Call 1 800-403-8184.">
+<meta property="og:image" content="https://algonquinstorage.ca/img/office-sign-1200.jpg">
+<meta property="og:url" content="https://algonquinstorage.ca/">
+<meta name="theme-color" content="#121110">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23d3313b'/%3E%3Ctext x='16' y='22' font-family='Arial Black,Arial' font-weight='900' font-size='14' text-anchor='middle' fill='white'%3EAS%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Indoor and outdoor storage for boats, RVs, cars, ATVs and sleds in South River, Ontario, just west of Algonquin Park. Call 1 800-403-8184.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&family=Figtree:wght@400;600;700&display=swap">
+<style>
+:root{padding-top:env(safe-area-inset-top,0px)}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+/* John's real sign and photos carry the page. One display face (hero + one line), Figtree for everything else.
+   Red only on the primary button and one emphasis. One small radius, no blur. */
+:root{
+  --sign:#d3313b; --sign-deep:#b0232d;
+  --night:#121110; --on-night:#f6f3ee; --on-night-muted:#b5afa5; --night-line:#2c2a27;
+  --paper:#f5f2ec; --surface:#fffdf9; --ink:#1b1916; --muted:#5f594f; --line:#e0d9ce;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:6px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --sign:#e0434c; --sign-deep:#c22f39; --paper:#161513; --surface:#1e1c19; --ink:#f2eee8; --muted:#a9a296; --line:#302d29; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --sign:#e0434c; --sign-deep:#c22f39; --paper:#161513; --surface:#1e1c19; --ink:#f2eee8; --muted:#a9a296; --line:#302d29; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--body)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--night)}
+.wrap{max-width:68rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{margin:0;text-wrap:balance}
+h2{font:700 clamp(1.7rem,6vw,2.4rem)/1.12 var(--body);letter-spacing:-.015em}
+h3{font:700 1.2rem/1.3 var(--body)}
+p{margin:0;max-width:60ch}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--sign);outline-offset:3px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border-radius:var(--r);font:700 1.05rem/1 var(--body);text-decoration:none;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-sign{background:var(--sign);color:#fff}
+.btn-sign:hover{background:var(--sign-deep)}
+.btn-out{border:1.5px solid rgba(255,255,255,.55);color:#fff}
+
+/* Nav: plain wordmark, the real sign is the logo */
+.nav{position:absolute;z-index:30;left:0;right:0;top:calc(14px + env(safe-area-inset-top,0px));color:#fff}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.word{font:700 1rem/1 var(--body);text-decoration:none;letter-spacing:.01em;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.nav .tel{display:none;font-weight:700;text-decoration:none;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+@media (min-width:860px){.nav .tel{display:inline}}
+
+/* Hero */
+.hero{position:relative;min-height:min(100svh,880px);display:flex;align-items:flex-end;color:#fff;background:var(--night);overflow:hidden}
+.hero img{position:absolute;left:0;right:0;top:0;width:100%;height:56%;object-fit:cover;object-position:68% 18%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,17,16,.45) 0%,rgba(18,17,16,0) 14%,rgba(18,17,16,0) 34%,var(--night) 56%)}
+.hero .wrap{position:relative;z-index:1;width:100%;padding-block:50svh 36px;display:grid;gap:18px}
+.hero h1{font:900 clamp(3.4rem,15vw,7rem)/.9 var(--display);text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--sign)}
+.hero .lede{font-size:1.12rem;color:rgba(255,255,255,.86)}
+.ctas{display:flex;gap:10px;flex-wrap:wrap}
+.hero .ctas .btn{flex:1 1 11rem}
+.facts{font-size:.95rem;color:var(--on-night-muted);border-top:1px solid var(--night-line);padding-top:14px}
+.facts a{color:var(--on-night);font-weight:600;text-decoration:none}
+@media (min-width:860px){
+  .hero{align-items:center}
+  .hero img{height:100%;object-position:60% 30%}
+  .hero::after{background:linear-gradient(90deg,rgba(18,17,16,.94) 0%,rgba(18,17,16,.72) 45%,rgba(18,17,16,.05) 78%),linear-gradient(180deg,rgba(18,17,16,.45),transparent 18%)}
+  .hero .wrap{padding-block:130px 60px}
+  .hero .wrap>*{max-width:38rem}
+  .hero .ctas .btn{flex:0 0 auto}
+}
+
+/* Video */
+.film{background:var(--night);color:var(--on-night)}
+.film .wrap{padding-block:8px 64px;display:grid;gap:18px;justify-items:center}
+.film .copy{justify-self:stretch;display:grid;gap:8px}
+.film .copy p{color:var(--on-night-muted)}
+.video{aspect-ratio:9/16;width:min(100%,360px);max-width:100%;border-radius:var(--r);overflow:hidden;background:#000}
+.video video{width:100%;height:100%;object-fit:cover;display:block}
+@media (min-width:860px){.film .wrap{grid-template-columns:1fr auto;align-items:center;column-gap:64px;padding-block:72px}}
+
+section.band{padding-block:60px}
+.intro{display:grid;gap:10px;margin-bottom:26px}
+.intro p{color:var(--muted)}
+
+/* Space types: plain list, photo shows the thing */
+.spaces{list-style:none;margin:0;padding:0;display:grid;gap:28px}
+.spaces li{display:grid;gap:12px}
+.spaces img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:var(--r)}
+.spaces p{color:var(--muted)}
+.spaces .for{font-size:.95rem;color:var(--ink)}
+@media (min-width:760px){.spaces{grid-template-columns:repeat(3,1fr);gap:24px}}
+
+/* Covered, not sealed: a different band */
+.why{background:var(--surface);border-block:1px solid var(--line)}
+.why .wrap{display:grid;gap:28px}
+.why img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r)}
+.why ul{margin:18px 0 0;padding:0 0 0 1.1em;display:grid;gap:8px;color:var(--muted)}
+.why ul b{color:var(--ink)}
+.payoff{margin-top:22px;font:900 clamp(2rem,8vw,3rem)/.95 var(--display);text-transform:uppercase}
+@media (min-width:860px){.why .wrap{grid-template-columns:1fr 1fr;align-items:center;column-gap:56px}}
+
+/* FAQ */
+.faq{max-width:46rem}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;font-weight:700;font-size:1.06rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--muted);flex:none}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{padding:0 0 18px;color:var(--muted)}
+
+/* Contact, night */
+.contact{background:var(--night);color:var(--on-night)}
+.contact .wrap{padding-block:60px 40px;display:grid;gap:24px}
+.contact .num{font:900 clamp(2.6rem,12vw,5rem)/.9 var(--display);text-decoration:none;font-variant-numeric:tabular-nums}
+.contact p{color:var(--on-night-muted)}
+.contact dl{margin:0;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));border-top:1px solid var(--night-line);padding-top:22px}
+.contact dt{font-size:.8rem;color:var(--on-night-muted)}
+.contact dd{margin:4px 0 0;font-weight:600;overflow-wrap:anywhere}
+footer{background:var(--night);color:var(--on-night-muted);font-size:.85rem;border-top:1px solid var(--night-line)}
+footer .wrap{padding-block:22px calc(22px + env(safe-area-inset-bottom,0px));display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+body.dock-on footer .wrap{padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))}
+
+/* Dock: appears only once the hero buttons scroll away (phones) */
+.dock{position:fixed;z-index:30;left:0;right:0;bottom:0;display:flex;gap:10px;
+  padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));
+  background:var(--night);border-top:1px solid var(--night-line);transform:translateY(110%);transition:transform .2s ease}
+.dock .btn{flex:1;min-height:48px}
+body.dock-on .dock{transform:none}
+@media (min-width:860px){.dock{display:none}body.dock-on footer .wrap{padding-bottom:22px}}
+@media (prefers-reduced-motion:reduce){.dock{transition:none}}
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="word" href="#top">Algonquin Storage</a>
+    <a class="tel" href="tel:+18004038184">1 800-403-8184</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <img src="img/office-sign-1200.jpg" srcset="img/office-sign-640.jpg 640w, img/office-sign-1200.jpg 1200w, img/office-sign-1920.jpg 1920w" sizes="100vw" alt="The Algonquin Storage office and sign on Ena Ave, with a pickup unloading an ATV" fetchpriority="high">
+  <div class="wrap">
+    <h1>Park it here <em>for the winter.</em></h1>
+    <p class="lede">Indoor and outdoor storage for boats, RVs, cars, ATVs and sleds in South River, just west of Algonquin Park.</p>
+    <div class="ctas" id="hero-ctas">
+      <a class="btn btn-sign" href="tel:+18004038184"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call 1 800-403-8184</a>
+      <a class="btn btn-out" href="mailto:john@algonquinstorage.com?subject=Storage%20inquiry">Email John</a>
+    </div>
+    <p class="facts">20 Ena Ave, South River, ON · minutes off Highway 11 · <a href="https://www.google.com/maps/search/?api=1&query=20+Ena+Ave+South+River+ON+P0A+1X0" target="_blank" rel="noopener">Directions</a></p>
+  </div>
+</header>
+
+<section class="film" aria-label="Video">
+  <div class="wrap">
+    <div class="copy">
+      <h2>Algonquin Storage in 15 seconds</h2>
+      <p>Tap the video for sound.</p>
+    </div>
+    <div class="video">
+      <video src="media/algonquin-storage.mp4" poster="media/poster.jpg" width="480" height="854" autoplay muted loop playsinline controls preload="metadata" aria-label="Algonquin Storage video"></video>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section class="band">
+    <div class="wrap">
+      <div class="intro">
+        <h2>Three ways to store it</h2>
+      </div>
+      <ul class="spaces">
+        <li><img src="img/dome-rvs-640.jpg" srcset="img/dome-rvs-640.jpg 640w, img/dome-rvs-1200.jpg 1200w" sizes="(min-width:760px) 33vw, 100vw" loading="lazy" alt="Travel trailers and boats parked inside the dome building">
+          <h3>Indoor, 22,400 sq ft</h3><p>Out of the snow and sun for the whole off-season.</p><p class="for">Boats, RVs and trailers, cars, ATVs, sleds</p></li>
+        <li><img src="img/rv-boat-covered-640.jpg" srcset="img/rv-boat-covered-640.jpg 640w, img/rv-boat-covered-1200.jpg 1200w" sizes="(min-width:760px) 33vw, 100vw" loading="lazy" alt="A motorhome and a boat under the covered barn roof">
+          <h3>Covered boat storage</h3><p>Under a metal roof and open to the air.</p><p class="for">Boats, pontoons, motorhomes</p></li>
+        <li><img src="img/dome-exterior-640.jpg" srcset="img/dome-exterior-640.jpg 640w, img/dome-exterior-1200.jpg 1200w" sizes="(min-width:760px) 33vw, 100vw" loading="lazy" alt="The dome storage building and outdoor yard">
+          <h3>Outdoor spaces</h3><p>Room on the property for larger units.</p><p class="for">Large RVs, trailers, boats</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band why">
+    <div class="wrap">
+      <img src="img/boats-covered-640.jpg" srcset="img/boats-covered-640.jpg 640w, img/boats-covered-1200.jpg 1200w" sizes="(min-width:860px) 50vw, 100vw" loading="lazy" alt="Pontoons and boats parked under the long covered roof">
+      <div>
+        <h2>Covered, not sealed</h2>
+        <ul>
+          <li><b>Metal roof overhead.</b> Snow and rain stay off.</li>
+          <li><b>Open to airflow.</b> Air keeps moving, which helps prevent mould and mildew.</li>
+          <li><b>Cameras.</b> Motion-sensitive cameras watch the property 24 hours a day.</li>
+        </ul>
+        <p class="payoff">Skip the shrink wrap.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="intro"><h2>Before you call</h2></div>
+      <div class="faq">
+        <details><summary>How much does it cost?</summary><p>Rates aren't posted online. Call John directly at 1 800-403-8184 or email john@algonquinstorage.com with what you're storing, and he'll give you a price.</p></details>
+        <details><summary>What can I store?</summary><p>Boats, RVs and trailers, cars, ATVs and sleds, indoors or outdoors.</p></details>
+        <details><summary>Why covered storage instead of shrink wrap?</summary><p>Your boat stays under a metal roof while air keeps moving around it, which helps prevent the mould and mildew that trapped moisture can cause.</p></details>
+        <details><summary>Where exactly are you?</summary><p>20 Ena Ave in South River, Ontario, just west of Algonquin Provincial Park and minutes from Highway 11.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="contact" aria-label="Contact">
+  <div class="wrap">
+    <h2>Call John for a rate</h2>
+    <a class="num" href="tel:+18004038184">1 800-403-8184</a>
+    <p>Tell him what you're storing and roughly how long.</p>
+    <div class="ctas">
+      <a class="btn btn-sign" href="tel:+18004038184">Call now</a>
+      <a class="btn btn-out" href="mailto:john@algonquinstorage.com?subject=Storage%20inquiry">Email John</a>
+    </div>
+    <dl>
+      <div><dt>Address</dt><dd>20 Ena Ave, South River, ON P0A 1X0</dd></div>
+      <div><dt>Email</dt><dd><a href="mailto:john@algonquinstorage.com">john@algonquinstorage.com</a></dd></div>
+      <div><dt>Directions</dt><dd><a href="https://www.google.com/maps/search/?api=1&query=20+Ena+Ave+South+River+ON+P0A+1X0" target="_blank" rel="noopener">Google Maps</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>© Algonquin Storage</span><span>South River, Ontario</span></div></footer>
+
+<nav class="dock" aria-label="Quick contact">
+  <a class="btn btn-sign" href="tel:+18004038184">Call</a>
+  <a class="btn btn-out" href="mailto:john@algonquinstorage.com?subject=Storage%20inquiry">Email</a>
+</nav>
+
+<script>
+(function(){
+  var t=document.getElementById('hero-ctas');
+  if(!('IntersectionObserver' in window)||!t){document.body.classList.add('dock-on');return}
+  new IntersectionObserver(function(e){document.body.classList.toggle('dock-on',!e[0].isIntersecting&&e[0].boundingClientRect.top<0)}).observe(t);
+})();
+</script>
+
+</body>
+</html>
